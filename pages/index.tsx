@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full h-screen bg-gradient-to-t from-amber-100 to-indigo-50 items-center justify-center p-8 z-10">
       <div
-        className="absolute top-0 left-0 w-full h-screen bg-gradient-to-br from-lime-400 to-pink-200 bg-opacity-20 animate-pulse z-20"
+        className="absolute lg:top-12 lg:right-12 lg:bottom-12 lg:left-12 top-2 left-2 right-2 bottom-2 bg-gradient-to-br from-lime-400 to-pink-200 opacity-20 animate-pulse z-20 rounded-2xl"
         style={{ animationDuration: "3s" }}
       />
       <div className="z-30 flex flex-col items-center justify-center">
@@ -19,7 +19,7 @@ export default function Home() {
           >
             🌞
           </span>
-          <h1 className="text-5xl font-bold text-center my-4">
+          <h1 className="text-6xl font-bold text-center my-4 text-lime-700">
             Hello Simon and Alexander
           </h1>
           <h2 className="text-2xl text-orange-700 text-center">
