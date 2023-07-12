@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full h-screen bg-gradient-to-t from-amber-100 to-indigo-50 items-center justify-center p-8 z-10">
       <div
-        className="absolute lg:top-12 lg:right-12 lg:bottom-12 lg:left-12 top-2 left-2 right-2 bottom-2 bg-gradient-to-br from-lime-400 to-pink-200 opacity-20 animate-pulse z-20 rounded-2xl"
+        className="absolute lg:top-24 lg:right-12 lg:bottom-12 lg:left-12 top-2 left-2 right-2 bottom-2 bg-gradient-to-br from-lime-400 to-pink-200 opacity-20 animate-pulse z-20 rounded-2xl"
         style={{ animationDuration: "3s" }}
       />
       <div className="z-30 flex flex-col items-center justify-center">
