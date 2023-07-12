@@ -19,7 +19,7 @@ export default function Home() {
           >
             🌞
           </span>
-          <h1 className="text-6xl font-bold text-center my-4 text-lime-700">
+          <h1 className="text-6xl font-bold text-center my-4 text-lime-600">
             Hello Simon and Alexander
           </h1>
           <h2 className="text-2xl text-orange-700 text-center">
