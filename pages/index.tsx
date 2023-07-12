@@ -12,7 +12,7 @@ export default function Home() {
         >
           🌞
         </span>
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold text-orange-950">
           Hello{" "}
           <i>
             <u>Simon</u>
@@ -22,7 +22,7 @@ export default function Home() {
             <u>Alexander</u>
           </i>
         </h1>
-        <h2 className="text-xl">
+        <h2 className="text-xl text-orange-700">
           This long until summer holidays for you two ⏳
         </h2>
       </div>
