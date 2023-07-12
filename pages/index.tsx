@@ -1,10 +1,18 @@
 import { Roboto_Mono } from "next/font/google";
 import Countdown from "react-countdown";
 import { differenceInMilliseconds } from "date-fns";
+import useSound from "use-sound";
+import { useEffect } from "react";
 
 const mono = Roboto_Mono({ subsets: ["latin"] });
 
 export default function Home() {
+  const [playSound] = useSound("/boing.mp3");
+
+  useEffect(() => {
+    setTimeout(playSound, 60000);
+  });
+
   return (
     <div className="flex flex-col w-full h-screen bg-gradient-to-t from-amber-100 to-indigo-50 items-center justify-center p-8 z-10">
       <div
@@ -22,6 +30,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-center text-lime-500">
             Good news for
           </h1>
+          {/* <button onClick={() => playSound()}>Boing!</button> */}
           <h1 className="text-6xl font-bold text-center my-9 text-lime-600">
             Simon and Alexander
           </h1>
