@@ -14,7 +14,7 @@ export default function Home() {
       <div className="z-30 flex flex-col items-center justify-center">
         <div className="flex flex-col items-center text-center">
           <span
-            className="lg:text-9xl text-6xl my-12 animate-spin text-amber-400"
+            className="lg:text-9xl text-6xl my-12 animate-spin text-amber-500"
             style={{ animationDuration: "60s" }}
           >
             🌞
