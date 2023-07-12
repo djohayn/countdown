@@ -23,7 +23,7 @@ export default function Home() {
           </i>
         </h1>
         <h2 className="text-lg">
-          This is how long you have until summer holidays
+          This long until summer holidays for you two ⏳
         </h2>
       </div>
       <Countdown
