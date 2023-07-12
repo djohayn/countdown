@@ -30,7 +30,7 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-center text-lime-500">
             Good news for
           </h1>
-          <button onClick={() => playSound()}>Boing!</button>
+          {/* <button onClick={() => playSound()}>Boing!</button> */}
           <h1 className="text-6xl font-bold text-center my-9 text-lime-600">
             Simon and Alexander
           </h1>
