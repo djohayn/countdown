@@ -19,11 +19,14 @@ export default function Home() {
           >
             🌞
           </span>
-          <h1 className="text-6xl font-bold text-center my-4 text-lime-600">
-            Hello Simon and Alexander
+          <h1 className="text-4xl font-bold text-center text-lime-500">
+            Good news for
+          </h1>
+          <h1 className="text-6xl font-bold text-center my-9 text-lime-600">
+            Simon and Alexander
           </h1>
           <h2 className="text-2xl text-orange-700 text-center">
-            This long until summer holidays for you two
+            only this long until summer holidays 👇
           </h2>
         </div>
         <Countdown
