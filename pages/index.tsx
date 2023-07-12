@@ -7,8 +7,8 @@ export default function Home() {
     <div className="flex flex-col w-full h-screen bg-gradient-to-t from-amber-100 to-indigo-50 items-center justify-center gap-16 p-8">
       <div className="flex flex-col gap-4 items-center text-center">
         <span
-          className="lg:text-9xl text-6xl mb-4"
-          style={{ animation: "spin 60s linear" }}
+          className="lg:text-9xl text-6xl mb-4 animate-spin"
+          style={{ animationDuration: "60s" }}
         >
           🌞
         </span>
