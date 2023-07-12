@@ -8,18 +8,22 @@ const mono = Roboto_Mono({ subsets: ["latin"] });
 
 export default function Home() {
   const [minutes] = useSound("/minutes.mp3");
+  const [zero] = useSound("/0.mp3");
   const [fifteen] = useSound("/15.mp3");
   const [thirty] = useSound("/30.mp3");
   const [fourtyfive] = useSound("/45.mp3");
   const [goodGracious] = useSound("/good-gracious.mp3");
 
   const maybeBoing = (e: CountdownTimeDelta) => {
-    if (e.seconds === 0 && e.minutes === 0 && e.hours === 16) {
+    if (e.seconds === 0 && e.minutes === 0 && e.hours === 0) {
       goodGracious();
     }
 
     if (e.seconds === 0) {
       switch (e.minutes) {
+        case 0:
+          zero();
+          setTimeout(minutes, 4);
         case 15:
           fifteen();
           setTimeout(minutes, 4);
