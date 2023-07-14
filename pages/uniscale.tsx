@@ -1,3 +1,5 @@
+"use client";
+
 import { Roboto_Mono, Inter } from "next/font/google";
 import Countdown, {
   CountdownRenderProps,
@@ -10,14 +12,15 @@ import SVG from "react-inlinesvg";
 const mono = Roboto_Mono({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
-  const [minutes] = useSound("/minutes.mp3");
-  const [zero] = useSound("/0.mp3");
-  const [fifteen] = useSound("/15.mp3");
-  const [thirty] = useSound("/30.mp3");
-  const [fourtyfive] = useSound("/45.mp3");
-  const [goodGracious] = useSound("/good-gracious.mp3");
+const mini = (number: any, text: string) => {
+  <div
+    className={`text-center text-4xl lg:text-8xl flex flex-col items-center ${mono.className}`}
+  >
+    {number} <span className="text-2xl">{text}</span>
+  </div>;
+};
 
+const uniscale = () => {
   const renderer = ({
     days,
     hours,
@@ -29,18 +32,42 @@ export default function Home() {
       return <span>You are good to go!</span>;
     } else {
       return (
-        <div
-          className={`font-medium text-[#f6f7f9] my-10 ${mono.className} flex flex-col max-w-5xl`}
-        >
-          <div className="text-center text-4xl lg:text-6xl">
-            {days} <span className="text-3xl">days</span>
+        <div className={`font-medium text-[#f6f7f9] my-10 max-w-5xl`}>
+          <div className="2xl:flex hidden">
+            <div
+              className={`text-4xl lg:text-8xl flex flex-col items-center ${mono.className} mx-8`}
+            >
+              {days} <span className={`text-2xl ${inter.className}`}>days</span>
+            </div>
+            <div
+              className={`text-4xl lg:text-8xl flex flex-col items-center ${mono.className} mx-8`}
+            >
+              {hours} <span className="text-2xl">hours</span>
+            </div>
+            <div
+              className={`text-4xl lg:text-8xl flex flex-col items-center ${mono.className} mx-8`}
+            >
+              {minutes} <span className="text-2xl">minutes</span>
+            </div>
+            <div
+              className={`text-4xl lg:text-8xl flex flex-col items-center ${mono.className} mx-8 min-w-[120px]`}
+            >
+              {seconds} <span className="text-2xl">seconds</span>
+            </div>
           </div>
-          <div className="text-center text-4xl lg:text-6xl my-6">
-            {hours} <span className="text-3xl">hours</span>
-          </div>
-          <div className="text-center text-2xl lg:text-5xl">
-            {minutes} <span className="text-2xl">minutes</span> {seconds}{" "}
-            <span className="text-2xl">seconds</span>
+          <div
+            className={`font-medium text-[#f6f7f9] my-10 ${mono.className} 2xl:hidden flex flex-col 2xl:flex-row max-w-5xl 2xl:items-baseline`}
+          >
+            <div className="text-center text-4xl lg:text-6xl">
+              {days} <span className="text-3xl">days</span>
+            </div>
+            <div className="text-center text-4xl lg:text-6xl my-6">
+              {hours} <span className="text-3xl">hours</span>
+            </div>
+            <div className="text-center text-2xl lg:text-5xl">
+              {minutes} <span className="text-2xl">minutes</span> {seconds}{" "}
+              <span className="text-2xl">seconds</span>
+            </div>
           </div>
         </div>
       );
@@ -84,4 +111,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default uniscale;
