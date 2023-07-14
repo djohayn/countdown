@@ -2,11 +2,11 @@ import { Roboto_Mono } from "next/font/google";
 import Countdown, { CountdownTimeDelta } from "react-countdown";
 import { differenceInMilliseconds } from "date-fns";
 import useSound from "use-sound";
+import Link from "next/link";
 
 const mono = Roboto_Mono({ subsets: ["latin"] });
 
 export default function Home() {
-  const [minutes] = useSound("/minutes.mp3");
   const [zero] = useSound("/0.mp3");
   const [fifteen] = useSound("/15.mp3");
   const [thirty] = useSound("/30.mp3");
@@ -50,6 +50,7 @@ export default function Home() {
             Good news for
           </h1>
           {/* <button onClick={() => playSound()}>Boing!</button> */}
+          <Link href="/uniscale">About Us</Link>
           <h1 className="text-6xl font-bold text-center my-9 text-lime-600">
             Simon and Alexander
           </h1>
