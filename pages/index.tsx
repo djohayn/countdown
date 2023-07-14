@@ -2,7 +2,6 @@ import { Roboto_Mono } from "next/font/google";
 import Countdown, { CountdownTimeDelta } from "react-countdown";
 import { differenceInMilliseconds } from "date-fns";
 import useSound from "use-sound";
-import { useEffect } from "react";
 
 const mono = Roboto_Mono({ subsets: ["latin"] });
 
@@ -23,16 +22,12 @@ export default function Home() {
       switch (e.minutes) {
         case 0:
           zero();
-          setTimeout(minutes, 4);
         case 15:
           fifteen();
-          setTimeout(minutes, 4);
         case 30:
           thirty();
-          setTimeout(minutes, 4);
         case 45:
           fourtyfive();
-          setTimeout(minutes, 4);
       }
     }
   };
