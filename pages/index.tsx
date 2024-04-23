@@ -13,25 +13,6 @@ export default function Home() {
   const [fourtyfive] = useSound("/45.mp3");
   const [goodGracious] = useSound("/good-gracious.mp3");
 
-  const maybeBoing = (e: CountdownTimeDelta) => {
-    if (e.seconds === 0 && e.minutes === 0 && e.hours === 0) {
-      goodGracious();
-    }
-
-    if (e.seconds === 0) {
-      switch (e.minutes) {
-        case 0:
-          zero();
-        case 15:
-          fifteen();
-        case 30:
-          thirty();
-        case 45:
-          fourtyfive();
-      }
-    }
-  };
-
   return (
     <div className="flex flex-col w-full h-screen bg-gradient-to-t from-amber-100 to-indigo-50 items-center justify-center p-8 z-10">
       <div
@@ -49,7 +30,6 @@ export default function Home() {
           <h1 className="text-4xl font-bold text-center text-lime-500">
             Good news for
           </h1>
-          {/* <button onClick={() => playSound()}>Boing!</button> */}
           <Link href="/uniscale">About Us</Link>
           <h1 className="text-6xl font-bold text-center my-9 text-lime-600">
             Simon and Alexander
@@ -59,13 +39,12 @@ export default function Home() {
           </h2>
         </div>
         <Countdown
-          onTick={(e) => maybeBoing(e)}
           className={`text-5xl lg:text-9xl font-bold text-orange-600 my-24 ${mono.className}`}
           date={
             Date.now() +
             Math.abs(
               differenceInMilliseconds(
-                new Date("July 14 2023 16:00"),
+                new Date("July 14 2024 16:00"),
                 Date.now()
               )
             )
